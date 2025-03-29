@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build Backend') {
             steps {
-                bat './mvnw clean install'
+                bat 'mvn clean dependency:purge-local-repository install'
             }
         }
 
